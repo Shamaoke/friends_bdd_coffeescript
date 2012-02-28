@@ -1,0 +1,1 @@
+Feature: Creating a friend
