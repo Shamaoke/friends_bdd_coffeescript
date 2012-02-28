@@ -3,7 +3,7 @@
 require 'fileutils'
 
 desc 'run all features'
-task :cucumber => [:cucumber:all]
+task :cucumber => ['cucumber:all']
 
 namespace :cucumber do
   desc 'Run all features'
@@ -24,7 +24,7 @@ end
 
 desc 'compile coffee files to lib'
 task :compile do
-  system 'coffee --compile --join lib/main.js src/*.coffee'
+  system 'coffee --compile --join lib/friends.js src/*.coffee'
 end
 
 desc 'run mocha specs'
