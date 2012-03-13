@@ -1,5 +1,5 @@
 require 'should'
 
 @World = (callback) ->
-  @Friend  = require('../../src/friend')['Friend']
+  @Friend = require('../../src/friend')['Friend']
   callback @
