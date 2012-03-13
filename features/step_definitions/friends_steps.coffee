@@ -1,6 +1,5 @@
 module.exports = ->
-  env    = require '../support/env'
-  @World = env['World']
+  @World = require('../support/env')['World']
 
   @When /^I create a friend with a name "([^"]*)"/, (name, callback) ->
     @friend = new @Friend(name)
