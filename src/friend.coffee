@@ -1,5 +1,6 @@
-@Friend = (name) ->
-  @name = name
+class Friend
+  constructor: (@name) ->
 
-@Friend.prototype.get_name = ->
-  @name
+  get_name: -> @name
+
+@Friend = Friend
