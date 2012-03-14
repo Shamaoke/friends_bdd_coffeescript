@@ -16,8 +16,7 @@ task 'compile', 'compile coffee files to lib', (options) ->
   exec 'coffee --compile --join lib/example.js src/*.coffee', (error, stdout, stderr) ->
 
 task 'clear', 'clear the lib directory', (options) ->
-  fs.readdir 'lib', (error, files) ->
-    fs.unlink "lib/#{file}" for file in files
+  fs.unlinkSync "lib/#{file}" for file in fs.readdirSync 'lib'
 
 task 'spec', 'run all specs', (options) ->
   exec 'mocha --colors --require should --reporter spec spec/*_spec.coffee', (error, stdout, stderr) ->
